@@ -8,7 +8,7 @@ import isodate
 
 
 # YT_API_KEY скопирован из гугла и вставлен в переменные окружения
-api_key: str = os.getenv('YT_API_KEY')
+api_key: str = os.getenv('API_KEY_YT')
 
 # создать специальный объект для работы с API
 youtube = build('youtube', 'v3', developerKey=api_key)
@@ -25,8 +25,8 @@ docs: https://developers.google.com/youtube/v3/docs/channels/list
 
 сервис для быстрого получения id канала: https://commentpicker.com/youtube-channel-id.php
 '''
-# channel_id = 'UCMCgOm8GZkHp8zJ6l7_hIuA'  # вДудь
-channel_id = 'UC1eFXmJNkjITxPFWTy6RsWg'  # Редакция
+# channel_id = 'UC-OVMPlMA3-YCIeg4z5z23A'  # MoscowPython
+channel_id = 'UCwHL6WHUarjGfUM_586me8w'  # HighLoad Channel
 channel = youtube.channels().list(id=channel_id, part='snippet,statistics').execute()
 printj(channel)
 
@@ -50,11 +50,10 @@ for playlist in playlists['items']:
 docs: https://developers.google.com/youtube/v3/docs/playlistItems/list
 
 получить id плейлиста можно из браузера, например
-https://www.youtube.com/playlist?list=PLguYHBi01DWr4bRWc4uaguASmo7lW4GCb
+https://www.youtube.com/playlist?list=PLH-XmS0lSi_zdhYvcwUfv0N88LQRt6UZn
 или из ответа API: см. playlists выше
 '''
-# playlist_id = 'PLguYHBi01DWrlpOkXwOYe8qjGFyqobcoO'
-playlist_id = 'PLguYHBi01DWr4bRWc4uaguASmo7lW4GCb'
+playlist_id = 'PLH-XmS0lSi_zdhYvcwUfv0N88LQRt6UZn'
 playlist_videos = youtube.playlistItems().list(playlistId=playlist_id,
                                                part='contentDetails',
                                                maxResults=50,
@@ -85,11 +84,9 @@ for video in video_response['items']:
 '''
 получить статистику видео по его id
 получить id можно из адреса видео
-https://www.youtube.com/watch?v=9lO06Zxhu88 или https://youtu.be/9lO06Zxhu88
+https://www.youtube.com/watch?v=gaoc9MPZ4bw или https://youtu.be/gaoc9MPZ4bw
 '''
-video_id = '9lO06Zxhu88'
-video_id = '9lO06Zxhu88'  # дудь кремниевая долина
-video_id = '4jRSy-_CLFg'  # Редакция плейлист анти-тревел
+video_id = 'gaoc9MPZ4bw'
 video_response = youtube.videos().list(part='snippet,statistics,contentDetails,topicDetails',
                                        id=video_id
                                        ).execute()

@@ -3,13 +3,13 @@ import datetime
 from src.playlist import PlayList
 
 if __name__ == '__main__':
-    pl = PlayList('PLguYHBi01DWr4bRWc4uaguASmo7lW4GCb')
-    assert pl.title == "Редакция. АнтиТревел"
-    assert pl.url == "https://www.youtube.com/playlist?list=PLguYHBi01DWr4bRWc4uaguASmo7lW4GCb"
+    pl = PlayList('PLv_zOGKKxVpj-n2qLkEM2Hj96LO6uqgQw')
+    assert pl.title == "Moscow Python Meetup №81"
+    assert pl.url == "https://www.youtube.com/playlist?list=PLv_zOGKKxVpj-n2qLkEM2Hj96LO6uqgQw"
 
     duration = pl.total_duration
-    assert str(duration) == "3:41:01"
+    assert str(duration) == "1:49:52"
     assert isinstance(duration, datetime.timedelta)
-    assert duration.total_seconds() == 13261.0
+    assert duration.total_seconds() == 6592.0
 
-    assert pl.show_best_video() == "https://youtu.be/9Bv2zltQKQA"
+    assert pl.show_best_video() == "https://youtu.be/cUGyMzWQcGM"

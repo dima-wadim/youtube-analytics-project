@@ -1,13 +1,13 @@
 from src.channel import Channel
 
 if __name__ == '__main__':
-    vdud = Channel('UCMCgOm8GZkHp8zJ6l7_hIuA')
-    vdud.print_info()
+    moscowpython = Channel('UC-OVMPlMA3-YCIeg4z5z23A')
+    moscowpython.print_info()
 
     """
 {
   "kind": "youtube#channelListResponse",
-  "etag": "TUX2o600Qs42JSCO9hckmDv7scY",
+  "etag": "uAdmwT0aDhY9LmAzJzIafD6ATRw",
   "pageInfo": {
     "totalResults": 1,
     "resultsPerPage": 5
@@ -15,42 +15,44 @@ if __name__ == '__main__':
   "items": [
     {
       "kind": "youtube#channel",
-      "etag": "SsK2QuB-f3WnRrph7tt5yppfuN8",
-      "id": "UCMCgOm8GZkHp8zJ6l7_hIuA",
+      "etag": "cPh7A8SKcZxxs_UPCiBaXP1wNDk",
+      "id": "UC-OVMPlMA3-YCIeg4z5z23A",
       "snippet": {
-        "title": "вДудь",
-        "description": "Здесь задают вопросы",
-        "customUrl": "@vdud",
-        "publishedAt": "2014-01-03T06:27:22Z",
+        "title": "MoscowPython",
+        "description": "Видеозаписи со встреч питонистов и джангистов в Москве и не только. :)\nПрисоединяйтесь: https://www.facebook.com/groups/MoscowDjango! :)",
+        "customUrl": "@moscowdjangoru",
+        "publishedAt": "2012-07-13T09:48:44Z",
         "thumbnails": {
           "default": {
-            "url": "https://yt3.ggpht.com/ytc/AL5GRJV2Av2ouJAjcHnaA8jokTI4uq6DZLnfHJm6T8vw=s88-c-k-c0x00ffffff-no-rj",
+            "url": "https://yt3.ggpht.com/ytc/AGIKgqNv2rZ6mOSuXvJLYhmTc0nd-LtI5RiDtsEBpguJXA=s88-c-k-c0x00ffffff-no-rj",
             "width": 88,
             "height": 88
           },
           "medium": {
-            "url": "https://yt3.ggpht.com/ytc/AL5GRJV2Av2ouJAjcHnaA8jokTI4uq6DZLnfHJm6T8vw=s240-c-k-c0x00ffffff-no-rj",
+            "url": "https://yt3.ggpht.com/ytc/AGIKgqNv2rZ6mOSuXvJLYhmTc0nd-LtI5RiDtsEBpguJXA=s240-c-k-c0x00ffffff-no-rj",
             "width": 240,
             "height": 240
           },
           "high": {
-            "url": "https://yt3.ggpht.com/ytc/AL5GRJV2Av2ouJAjcHnaA8jokTI4uq6DZLnfHJm6T8vw=s800-c-k-c0x00ffffff-no-rj",
+            "url": "https://yt3.ggpht.com/ytc/AGIKgqNv2rZ6mOSuXvJLYhmTc0nd-LtI5RiDtsEBpguJXA=s800-c-k-c0x00ffffff-no-rj",
             "width": 800,
             "height": 800
           }
         },
         "localized": {
-          "title": "вДудь",
-          "description": "Здесь задают вопросы"
-        }
+          "title": "MoscowPython",
+          "description": "Видеозаписи со встреч питонистов и джангистов в Москве и не только. :)\nПрисоединяйтесь: https://www.facebook.com/groups/MoscowDjango! :)"
+        },
+        "country": "RU"
       },
       "statistics": {
-        "viewCount": "1925259492",
-        "subscriberCount": "10300000",
+        "viewCount": "2303120",
+        "subscriberCount": "25900",
         "hiddenSubscriberCount": false,
-        "videoCount": "163"
+        "videoCount": "685"
       }
     }
   ]
 }
+
     """
