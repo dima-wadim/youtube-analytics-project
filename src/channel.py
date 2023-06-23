@@ -4,6 +4,7 @@ import os
 from googleapiclient.discovery import build
 
 
+
 class Channel:
     """Класс для ютуб - канала"""
 
@@ -51,8 +52,8 @@ class Channel:
         youtube = build('youtube', 'v3', developerKey=api_key)
         channel = youtube.channels()
         channel = channel.list(id=self.__channel_id, part='snippet,statistics')
-        channel = channel.execute()
-        print(json.dumps(channel, indent=2, ensure_ascii=False))
+        channell = channel.execute()
+        print(json.dumps(channell, indent=2, ensure_ascii=False))
 
     @classmethod
     def get_service(cls):
