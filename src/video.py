@@ -5,12 +5,18 @@ class Video(Channel):
 
     def __init__(self, video_id):
         self.__video_id = video_id
-        video_response = self.get_service().videos().list(part='snippet,statistics,contentDetails,topicDetails', id=video_id).execute()
-        self.title = str(video_response['items'][0]['snippet']['title'])
-        self.url = f"https://youtu.be/{self.__video_id}"
-        self.view_count = int(video_response['items'][0]['statistics']['viewCount'])
-        self.like_count = int(video_response['items'][0]['statistics']['likeCount'])
+        try:
+            video_response = self.get_service().videos().list(part='snippet,statistics,contentDetails,topicDetails', id=video_id).execute()
+            self.title = str(video_response['items'][0]['snippet']['title'])
+            self.url = f"https://youtu.be/{self.__video_id}"
+            self.view_count = int(video_response['items'][0]['statistics']['viewCount'])
+            self.like_count = int(video_response['items'][0]['statistics']['likeCount'])
 
+        except Exception:
+            self.title = None
+            self.url = None
+            self.view_count = None
+            self.like_count = None
     def __str__(self):
         return f"{self.title}"
 
